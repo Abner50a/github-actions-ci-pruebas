@@ -1,0 +1,50 @@
+# #4000 host publica y 4020 port de la app
+# version: "3" 
+
+# services:
+#     web:
+#         build: .
+#         ports: 
+#             - "4000:4020"
+#         depends_on:
+#             - db    
+#     #Build: Ejecuta el docker file para crear la imagen
+#     #ports: Sinonimo del docker 
+#     #Corre el port de compose docker-compose build
+#     ##Correr e docker docker compose up 
+#     db:
+#         image: mongo
+#         restart: always
+#         expose:
+#             - "27017"    
+
+version: "3"
+
+services:
+    web:
+        build: .
+        ports:
+            - "4000:4020"
+        depends_on:
+            - db
+        env_files:
+            - .env    
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+
+    # build: Ejecuta el docker file para crear la imagen y despues crea el container
+    # ports: Sinonimo del docker run -p 4000:4020 api-mongo, hace un puenta entre el puerto 4000 de mi pc con 4020 del container
+    #env_files define un archivo env y crear las variable
+
+    db:
+        image: mongo
+        restart: always
+        expose:
+            - "27017"
+        volumes:
+            - mongodata:/data/db  
+
+#En este caso el volumen me va ayudar a que persistan mis datos en la BD            
+volumes:
+    mongodata:
