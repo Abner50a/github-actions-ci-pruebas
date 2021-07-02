@@ -9,7 +9,7 @@ const databases = {
   // test : {},  //Prueba de BD- para correr la bd o para entorno experimental
   // dev: {},  //UNa copia exacta de production
   // staging: {},  //UNa copia exacta para hacer prueba hacer justamente antes de producción
-  // production : { ñ ñas asdasd as hola
+  // production : { ñ ñas asdasd as hol
 
   test: {
     //Cambios significativos en la estructura de la bd
