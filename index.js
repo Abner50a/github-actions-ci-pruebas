@@ -12,7 +12,7 @@ const { db_uri } = require('./config');
 
 
 mongoose.connect(db_uri, {useNewUrlParser: true, useUnifiedTopology: true})
-  .then(() => console.log('Database connected'))
+  .then(() => console.log('Database connected - base de datos conectada'))
   .catch(() => console.log('Error connecting to database...'));
 
 app.use(express.json());
