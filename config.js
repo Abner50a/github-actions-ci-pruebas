@@ -17,12 +17,12 @@ const databases = {
   },
   //Entorno predeterminado para trabajar en el dia a dia
   dev: {
-    db_uri: `mongodb://db:27017/${MONGO_DB_NUEVA}`
-   // db_uri: `mongodb+srv://${MONGO_ATLAS_USER}:${MONGO_ATLAS_PASSWORD}@cluster0.fup77.mongodb.net/development?retryWrites=true&w=majority`,
+   // db_uri: `mongodb://db:27017/${MONGO_DB_NUEVA}`
+    db_uri: `mongodb+srv://${MONGO_ATLAS_USER}:${MONGO_ATLAS_PASSWORD}@cluster0.fup77.mongodb.net/development?retryWrites=true&w=majority`,
   },
   //contiene los datos reales de nuestros usuarios/clientes
   production: {
-    //db_uri: `mongodb+srv://${MONGO_ATLAS_USER}:${MONGO_ATLAS_PASSWORD}@cluster0.fup77.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+    db_uri: `mongodb+srv://${MONGO_ATLAS_USER}:${MONGO_ATLAS_PASSWORD}@cluster0.fup77.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
   }
   
 };
