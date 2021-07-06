@@ -20,7 +20,7 @@ const environments = {
     // Contiene los datos reales de nuestros usuarios/clientes
     production: {
         PORT,
-        db_uri: `mongodb+srv://${MONGO_ATLAS_USER}:${MONGO_ATLAS_PASSWORD}@madea.j9vdi.mongodb.net/MasterEnCode?retryWrites=true&w=majority`
+        db_uri: `mongodb+srv://${MONGO_ATLAS_USER}:${MONGO_ATLAS_PASSWORD}@cluster0.fup77.mongodb.net/MasterEnCode?retryWrites=true&w=majority`
     },
 }
 
